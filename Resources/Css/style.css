@@ -1,0 +1,608 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: black;
+}
+
+/*header*/
+.headercontainer {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  z-index: 99;
+}
+
+.headerlogo {
+  height: 70px;
+  width: 70px;
+  margin: 5px;
+  background-image: url("../Image/Logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.headerfreespace {
+  height: 100%;
+  width: 500px;
+  flex: 1;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 60px;
+  display: inline-flex;
+}
+
+.nav a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.navbox {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.navboxnumb {
+  width: 100%;
+  margin: 0.5rem 0;
+  font-size: 0.5rem;
+  color: white;
+  opacity: 0.6;
+}
+
+.navboxtext {
+  width: 100%;
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
+  color: white;
+  opacity: 0.6;
+}
+
+.animbar {
+  width: 10%;
+  margin-top: 0.5rem;
+  height: 0.25rem;
+  background-color: white;
+  opacity: 0.6;
+}
+
+.navbox a:hover > * {
+  opacity: 0.8;
+  width: 100%;
+  transition: opacity 0.5s, width 0.5s;
+}
+
+.navbox a:active > * {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.bigscreen {
+  visibility: visible;
+}
+
+.smallscreen {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  
+  .bigscreen {
+    visibility: hidden;
+  }
+
+  .smallscreen {
+    visibility: visible;
+  }
+
+  .headercontainer {
+    height: auto;
+    width: auto;
+    z-index: 99;
+  }
+
+  .headerlogo {
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+    background-image: url("../Image/Logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .nav {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .nav li {
+    margin: auto;
+    display: inline-flex;
+  }
+
+  .nav a {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: normal;
+    color: white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    background-color: transparent;
+    opacity: 0.9;
+  }
+  
+  .nav a:hover {
+    opacity: 1;
+    transition: font-weight 0.5s;
+  }
+  
+  .nav a:active {
+    font-weight: bold;
+    transition: margin-top 0.5s;
+  }
+
+}
+
+/*landing*/
+.landing {
+  width: 100%;
+  height: 480px;
+}
+
+.videocontainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.videocontainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.landingcontent {
+  position: relative;
+  top: -320px;
+  width: 100%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex: 1;
+  margin: auto;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+  opacity: 0.8;
+}
+
+.landingbefore {
+  width: 100%;
+  height: auto;
+  margin: 0.75rem 0;
+  letter-spacing: 0.1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.landinglogo {
+  width: 100%;
+  min-height: 70px;
+  margin: 0.75rem 0;
+  background-image: url("../Image/LogoEsteso.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.landingafter {
+  width: 100%;
+  height: auto;
+  margin: 0.75rem 0;
+  letter-spacing: 0.1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/*commons*/
+.title {
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  color: white;
+  padding: 10px;
+  margin: 2.5rem auto;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.title span {
+  font-size: 4rem;
+}
+
+/*events*/
+.eventscontainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventbox {
+  width: 70%;
+  min-height: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
+  color: white;
+}
+
+.febbre {
+  background-image: radial-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+    url("../Image/FIRENZE-FEBBRE-A-90_QUADRATA-PRINCIPALE.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nobodys1 {
+  background-image: radial-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+    url("../Image/Tnx-Square-Nobody's-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nobodys2 {
+  background-image: radial-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+    url("../Image/Tnx-Square-Nobody's-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dateday {
+  margin: 1rem;
+  font-size: 6rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.9;
+}
+
+.daterest {
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.9;
+}
+
+.linetop {
+  margin: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.9;
+}
+
+.linemid {
+  margin: 1rem 2rem;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: bolder;
+  color: rgb(179, 11, 81);
+}
+
+.linebot {
+  margin: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.9;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.links a {
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  color: white;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  background-color: rgb(179, 11, 81);
+  opacity: 0.9;
+}
+
+.links a:hover {
+  opacity: 1;
+  transition: font-weight 0.5s;
+}
+
+.links a:active {
+  font-weight: bold;
+  transition: margin-top 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+  
+  .eventscontainer {
+    width: 100%;
+    height: auto;
+  }
+  
+  .eventbox {
+    width: 100%;
+    min-height: 150px;
+    display: block;
+    justify-content: center;
+    margin: 2rem auto;
+    color: white;
+  }
+
+  .links a {
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: normal;
+    color: white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(179, 11, 81);
+    opacity: 0.9;
+  }
+
+}
+
+/*about*/
+.aboutcontainer {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.aboutcontent {
+  width: 40%;
+  min-width: 400px;
+  height: auto;
+}
+
+.aboutcontent p {
+  margin: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.aboutimage {
+  width: 60%;
+  min-width: 400px;
+  height: auto;
+  background-image: radial-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+    url("../Image/Tenax.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 800px) {
+
+  .aboutcontainer {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .aboutcontent {
+    width: 100%;
+    min-width: 400px;
+    height: auto;
+  }
+  
+  .aboutcontent p {
+    margin: 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    opacity: 0.9;
+  }
+
+  .aboutimage {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+      url("../Image/Tenax.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+/*resident*/
+.residentcontainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .residentbox {
+    min-width: 200px;
+    max-width: 250px;
+    height: 200px;
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .residentimage {
+    width: 100%;
+    height: 80%;
+  }
+
+  .resident1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Image/alex-neri-600x413.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .resident2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Image/marco-faraone-600x413.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .resident3 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Image/philipp-600x413.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .resident4 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Image/mennie-600x413.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .resident5 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Image/luca-donzelli-600x413.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .resident6 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Image/cole-600x413.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  .residentontent {
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+    color: white;
+  }
+
+  .residentontent:hover {
+    background-color: rgb(179, 11, 81);
+    transition: 1s;
+  }
+
+  .residentontent p {
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-align: left;
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 800px) {
+
+    .residentcontainer {
+      display: block;
+    }
+
+    .residentbox {
+      width: 400px;
+      height: 400px;
+      margin: 4rem auto;
+      display: block;
+    }
+
+    .residentimage {
+      width: 100%;
+      height: 100%;
+    }
+
+    .residentontent {
+      background-color: transparent;
+      color: white;
+    }
+
+    .residentontent p {
+      font-size: 1rem;
+      margin: 1rem 0;
+      font-weight: bold;
+      text-align: left;
+      opacity: 0.9;
+    }
+
+  }
